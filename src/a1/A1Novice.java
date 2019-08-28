@@ -8,7 +8,23 @@ public class A1Novice {
 		
 		Scanner scan = new Scanner(System.in);
 
-		// Your code follows here.
+        int count = scan.nextInt();
+
+        String[] names = new String[count];
+        double[] totalPrice = new double[count];
+
+        for (int i = 0; i < count; i++) {
+            names[i] = scan.next().charAt(0) + ". " + scan.next();
+            int items = scan.nextint();
+            for (int i = 0; i < items; i++) {
+                double total = 0;
+                total += scan.nextint() * scan.nextDouble();
+                totalPrice[i] = total;		
+            }
+        }
+        for (int i = 0; i < count; i++) {
+            System.out.println(names[i] + totalPrice[i]);
+        }
 		
 	}
 }
