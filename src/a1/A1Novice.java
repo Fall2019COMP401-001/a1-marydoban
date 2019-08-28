@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class A1Novice {
 
 	public static void main(String[] args) {
-		
-		Scanner scan = new Scanner(System.in);
+
+        Scanner scan = new Scanner(System.in);
 
         int count = scan.nextInt();
 
@@ -15,16 +15,17 @@ public class A1Novice {
 
         for (int i = 0; i < count; i++) {
             names[i] = scan.next().charAt(0) + ". " + scan.next();
-            int items = scan.nextint();
-            for (int i = 0; i < items; i++) {
+            int items = scan.nextInt();
+            for (int j = 0; j < items; j++) {
                 double total = 0;
-                total += scan.nextint() * scan.nextDouble();
-                totalPrice[i] = total;		
+                total += scan.nextInt() * scan.nextDouble();
+                totalPrice[j] = total;		
             }
         }
         for (int i = 0; i < count; i++) {
             System.out.println(names[i] + totalPrice[i]);
         }
-		
-	}
+
+    }
+
 }
