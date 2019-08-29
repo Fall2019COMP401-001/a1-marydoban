@@ -10,21 +10,31 @@ public class A1Novice {
 
         int count = scan.nextInt();
 
-        String[] names = new String[count];
-        double[] totalPrice = new double[count];
+        String[] output = new String[count];
+        
+        for (int i = 0; i < count; i++) {
+        	String first = scan.next();
+        	String last = scan.next();
+        	int items = scan.nextInt();
+        	
+        	double total = 0;
+        	
+        	for(int j = 0; j < count; j++) {
+        		double quant = scan.nextDouble();
+        		String item = scan.next();
+        		double price = scan.nextDouble();
+       
+        		total += quant * price;
+        	}
+        	
+        	output[i] = first.charAt(0) + ". " + last + String.format("%.2f", total);
+        				
+        }
+        for (int i = 0; i < count; i++) {
+        	System.out.println(output[i]);
+        }
 
-        for (int i = 0; i < count; i++) {
-            names[i] = scan.next().charAt(0) + ". " + scan.next();
-            int items = scan.nextInt();
-            for (int j = 0; j < items; j++) {
-                double total = 0;
-                total += scan.nextInt() * scan.nextDouble();
-                totalPrice[j] = total;		
-            }
-        }
-        for (int i = 0; i < count; i++) {
-            System.out.println(names[i] + totalPrice[i]);
-        }
+
 
     }
 
