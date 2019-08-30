@@ -30,6 +30,7 @@ public class A1Novice {
             output[i] = first.charAt(0) + ". " + last + " " + String.format("%.2f", total);
 
         }
+        scan.close();
         for (int i = 0; i < count; i++) {
             System.out.println(output[i]);
         }
