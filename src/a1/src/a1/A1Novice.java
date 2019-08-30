@@ -27,7 +27,7 @@ public class A1Novice {
                 total += quant * price;
             }
 
-            output[i] = first.charAt(0) + ". " + last + String.format("%.2f", total);
+            output[i] = first.charAt(0) + ". " + last + " " + String.format("%.2f", total);
 
         }
         for (int i = 0; i < count; i++) {
